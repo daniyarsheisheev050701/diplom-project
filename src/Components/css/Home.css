@@ -1,0 +1,183 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+   
+}
+.header{
+    background-color: black;
+    height: 100vh;
+}
+.nav-logo img{
+    padding-top: 3rem;
+    width: 40%;
+}
+.nav-item {
+    display: flex;
+    gap: 3rem;
+}
+.nav-item a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 1s;
+    padding-top: 3rem;
+}
+.nav-item a:hover{
+    color: #2a008b;
+    transition: 1s;
+}
+.item-header{
+    display: grid;
+    justify-content: center;
+    padding-top: 8rem;
+}
+.item-header h1{
+    color: #ffffff;
+    font-size: 54px;
+    
+}
+.btn{
+    padding-top: 3rem;
+}
+.btn button{
+    color: #fff;
+    font-size: 24px;
+    background-color: #3c00c6;
+    height: 7vh;
+    width: 30%;
+}
+
+
+.section-item{
+    height: 100vh;
+
+}
+.text-item{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.text-item h1{
+    font-size: 58px;
+}
+.text-item p{
+    font-size: 33px;
+    color: #000000ce;
+}
+
+.direction{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.direction-text1 p{
+    width: 500px;
+}
+
+.text-di{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+
+.btn-dir1{
+    background-color: #3c00c6;
+    width: 50%;
+    height: 5vh;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.btn-dir2{
+    background-color: #ffffff;
+    width: 40%;
+    height: 5vh;
+    font-size: 20px;
+    color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+.learning{
+    height: 150vh;
+}
+
+.learntext{
+    display: grid;
+    justify-content: center;
+    padding-top: 15rem;
+    text-align: center;
+}
+
+.learntext h1{
+    font-size: 58px;
+}
+
+.learntext p{
+    font-size: 34px;
+}
+.learning p{
+    font-size: 34px;
+    text-align: center;
+}
+
+
+.learntext2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.inner-text-learn p{
+    font-size: 24px;
+    width: 300px;
+}
+.inner-text-learn h1{
+    color: blue;
+    cursor: pointer;
+}
+
+
+.Joinatanystage{
+    height: 100vh;
+    position: relative;
+    background-color: #000000;
+}
+
+.Joinatanystage h1{
+    font-size: 58px;
+    color: #fff;
+}
+.Joinatanystage p{
+    font-size: 40px;
+    color: #fff;
+    width: 1000px;
+}
+.join{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.btnjoin{
+    padding: 20px 80px;
+    background-color: blue;
+    position: absolute;
+    color: #fff;
+    left: 54rem;
+    margin-top: 5rem;
+    font-size: 24px;
+}
+
+
+
+
+
+
