@@ -50,7 +50,16 @@
 
 .section-item{
     height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 8rem;
 
+}
+
+.cards:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.409), 0 10px 10px rgba(0, 0, 0, 0.422);
+   
 }
 .text-item{
     display: grid;
@@ -106,13 +115,12 @@
 
 
 .learning{
-    height: 150vh;
+    height: 120vh;
 }
 
 .learntext{
     display: grid;
     justify-content: center;
-    padding-top: 15rem;
     text-align: center;
 }
 
@@ -149,17 +157,16 @@
 .Joinatanystage{
     height: 100vh;
     position: relative;
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .Joinatanystage h1{
     font-size: 58px;
-    color: #fff;
+    color: #000000;
 }
 .Joinatanystage p{
     font-size: 40px;
-    color: #fff;
-    width: 1000px;
+    color: #000000;
 }
 .join{
     display: grid;
@@ -171,8 +178,7 @@
     background-color: blue;
     position: absolute;
     color: #fff;
-    left: 54rem;
-    margin-top: 5rem;
+    
     font-size: 24px;
 }
 
@@ -180,4 +186,141 @@
 
 
 
+.bnn button{
+    padding: 20px 40px ;
+    background-color: #4c00ff;
+    color: #fff;
+}
 
+.bnn button:hover{
+    background-color: #ff0000da;
+    color: #ffffff;
+}
+
+
+
+
+.metods{
+    text-align: center;
+}
+
+
+.learnmetods{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.bttn button{
+    padding: 20px 40px ;
+    background-color: #4c00ff;
+    color: #fff;
+
+}
+
+.bttn button:hover{
+    background-color: #ff0000da;
+    color: #ffffff;
+}
+.price{
+    height: 100vh;
+    text-align: center;
+    padding-top: 6rem;
+    line-height: 5rem;
+}
+.aaa h1{
+    font-size: 45px;
+}
+.aaa h2{
+    font-size: 44px;
+}
+.aaa h3{
+    font-size: 34px;
+}
+
+
+.otzyv{
+    height: 100vh;
+}
+
+.sad{
+    display: flex;  
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+}
+
+.ot h1{
+    font-size: 54px;
+    padding-top: 5rem;
+    text-align: center;
+}
+.questions{
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.788);
+}
+.questions h1{
+    font-size: 54px;
+    text-align: center;
+}
+
+.acordion{
+    width: 800px;
+    position: absolute;
+    left: 35rem;
+}
+.footer{
+    height: 70vh;
+}
+.footer h1{
+    text-align: center;
+    font-size: 54px;
+}
+
+.fo{
+    display: grid;
+}
+.fo h2{
+    font-size: 40px;
+}
+.fo a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #3300a9bd;
+}
+.fot{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5rem;
+}
+
+.fotes{
+    display: flex;
+    background-color: #000000;
+    padding-top: 6rem;
+    color: #fff;
+    height: 40vh;
+    justify-content: space-evenly;
+}
+
+.fotes h2{
+    font-size: 35px;
+}
+.fotes p{
+        font-size: 23px;
+}
+
+.svgs svg{
+    width: 35px;
+    height: 10%;
+    transition: 0.3s;
+}
+.svgs svg:hover{
+    color: #c30000ce;
+    transition: 0.3s;
+}
+.svgs {
+    text-align: center;
+}

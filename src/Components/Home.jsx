@@ -1,13 +1,66 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './css/Home.css'
+import { motion } from "framer-motion"
 import logo from "../img/logotip.png"
 import mans from '../img/mans.png'
+import front from '../img/fron.png'
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import vid from '../img/vid.jpeg'
 import wooman from '../img/woomans.png'
-import blackman from '../img/blaack-man.png'
-
-
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Accordion from '@mui/material/Accordion';
+import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 function Home() {
+  const texAnimation ={
+    hidden: {
+      x:- 600,
+      opacity:0,
+    },
+    visible: custom => ({
+      x: 0,
+      opacity: 1,
+      transition:{delay: custom * 0.1},
+    })
+ 
+  }
+   const teAnimation ={
+    hidden: {
+      x: 600,
+      opacity:0,
+    },
+    visible: custom => ({
+      x:- 0,
+      opacity:1,
+      transition:{delay: custom * 0.1},
+    })
+ 
+  }
+   const tAnimation ={
+    hidden: {
+      y: 600,
+      opacity:0,
+      // transition: 
+      
+    },
+    visible: custom => ({
+      y:- 0,
+      opacity:1,
+      transition:{delay: custom * 0.1},
+    })
+ 
+  }
   return (
     <div>
       <div className='header'>
@@ -17,7 +70,7 @@ function Home() {
         </div>
         <div className='nav-item'>
         <Link to="/" >Главная</Link>
-        <Link to="about" >About</Link>
+        <Link to="about" >Frontend разработчик</Link>
         <Link to="contacts" >Contacts</Link>
         <Link to="service" >Service</Link>
         </div>
@@ -38,50 +91,93 @@ function Home() {
       </div>
      
         <section className='section-item'>
-          <div className='text-item'>
-              <h1>Направления обучения<br />
-                  </h1>
-                  <p>Профессии и курсы, на которые сейчас<br />
-                  открыт набор</p>
-          </div>
-          <div className='direction'>
-            <img src={mans} />
-            <img src={wooman} />
-            <img src={blackman} />
-          </div>
-          <div className='text-di'>
-          <div className='direction-text1'>
-            <h1>ПОДГОТОВИТЕЛЬНЫЙ КУРС<br />
-                Основы программирования</h1>
-                <p>2 недели, на которых ты попробуешь все четыре профессий и подготовишь себя к погружению в изучение. <br />
-                  Идеально для тех, у кого нет опыта в программировании или пользовании компьютером. <br />
-                  Обучение проходит по методике перевернутого класса.</p>
-                  <button className='btn-dir1'>Записаться на курс</button>
-                  <button className='btn-dir2'>Узнать больше</button>
-          </div>
-          <div className='direction-text1'>
-            <h1>КУРС-ПРОФЕССИЯ<br />
-                Java-разработчик</h1>
-                <p>Занимается создание сложных программ и <br /> 
-                систем с высоким уровнем безопасности. 
-                 Одно из самых востребованных и 
-                  стабильных направлений в 
-                   программировании. 
-                   Выпускники чаще всего работают в банках 
-                    и телекоммуникационных компаниях.</p>
-                  <button className='btn-dir1'>Записаться на курс</button>
-                  <button className='btn-dir2'>Узнать больше</button>
-          </div>
-          <div className='direction-text1'>
-            <h1>ПОДГОТОВИТЕЛЬНЫЙ КУРС<br />
-                Основы программирования</h1>
-                <p>2 недели, на которых ты попробуешь все четыре профессий и подготовишь себя к погружению в изучение. <br />
-                  Идеально для тех, у кого нет опыта в программировании или пользовании компьютером. <br />
-                  Обучение проходит по методике перевернутого класса.</p>
-                  <button className='btn-dir1'>Записаться на курс</button>
-                  <button className='btn-dir2'>Узнать больше</button>
-          </div>
-          </div>
+          <motion.div 
+           initial="hidden"
+          whileInView="visible"
+          variants={texAnimation} 
+          >
+<Card className='cards' sx={{ maxWidth: 550 }}>
+      <CardMedia
+    
+        sx={{ height: 500, }}
+        image={mans}
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        ПОДГОТОВИТЕЛЬНЫЙ КУРС <br />
+        Основы программирования
+        </Typography>
+        <Typography variant="body1" color="text.secondary" fontSize="19px">
+          2 недели, на которых ты попробуешь все четыре профессий и подготовишь себя к погружению в изучение.
+            Идеально для тех, у кого нет опыта в программировании или пользовании компьютером.
+            Обучение проходит по методике перевернутого класса.
+        </Typography>
+      </CardContent>
+      <CardActions className='bnn'>
+        <Button className='bbb'>Записаться на курс</Button>
+        <Button >Узнать больше</Button>
+      </CardActions>
+    </Card>
+          </motion.div>
+        <motion.div
+         initial="hidden"
+         whileInView="visible"
+         variants={tAnimation}
+        >
+        <Card  className='cards' sx={{ maxWidth: 550 }}>
+      <CardMedia
+        sx={{ height: 500 }}
+        image={wooman}
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        ПОДГОТОВИТЕЛЬНЫЙ КУРС <br />
+        Основы программирования
+        </Typography>
+        <Typography variant="body1" color="text.secondary" fontSize="19px">
+          2 недели, на которых ты попробуешь все четыре профессий и подготовишь себя к погружению в изучение.
+            Идеально для тех, у кого нет опыта в программировании или пользовании компьютером.
+            Обучение проходит по методике перевернутого класса.
+        </Typography>
+      </CardContent>
+      <CardActions className='bnn'>
+        <Button className='bbb'>Записаться на курс</Button>
+        <Button >Узнать больше</Button>
+      </CardActions>
+    </Card>
+        </motion.div>
+    <motion.div
+    initial="hidden"
+    whileInView="visible"
+    variants={teAnimation}
+    >
+ <Card  className='cards' sx={{ maxWidth: 550 }}>
+      <CardMedia
+        sx={{ height: 500}}
+        image={front}
+
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+            КУРС-ПРОФЕССИЯ <br />
+            Frontend-разработчик
+        </Typography>
+        <Typography variant="body1" color="text.secondary" fontSize="19px">
+                 Мастер создания сайтов. Умеет делать их красивыми, интерактивными,
+                  с большим функционалом. Профессия отлично подойдет тем, кто хочет 
+                  фрилансить и постоянно разрабатывать новые проекты.
+                          Один из самых популярных курсов для новичков.   
+        </Typography>
+      </CardContent>
+      <CardActions className='bnn'>
+        <Button className='bbb'>Записаться на курс</Button>
+        <Button >Узнать больше</Button>
+      </CardActions>
+    </Card>
+    </motion.div>
         </section>
         <section className='learning'>
             <div className='learntext'>
@@ -134,20 +230,378 @@ function Home() {
                </div>
         </section>
         <section className='Joinatanystage'>
-          <div className='join'>
-          <h1>Присоединяйся на любом этапе</h1>
-          <p>Если ты уже знаешь основы какого-то
-             языка программирования — можно 
-             пропустить первые месяцы обучения.
-              Для этого мы разработали специальные 
-              тесты, которые помогут определить
-               к какому этапу тебя стоит подключить</p>
+         <div className='metods'>
+          <h1>
+          Методика обучения
+          </h1>
+          <p>
+          Летом 2020 года мы внедрили уникальную <br /> систему обучения, не имеющую аналогов <br /> на территории СНГ
+          </p>
+         </div>
+         <div className='learnmetods'>
+         <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 100 }}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        Старт с самого нуля
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        Если ты до этого никогда не изучал программирование — тебе не будет тяжело. <br />
+         Ведь мы начинаем с самых азов: от установки нужных программ и базового синтаксиса, <br />
+          до реальных проектов с нуля.
+        </Typography>
+      </CardContent>
+    </Card>
+         <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        Командное обучение
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        Все студенты формируются в команды из 5 человек. 
+        Это помогает создавать более качественные проекты 
+        во время обучения и готовит к реалиям IT-компаний.
+        </Typography>
+      </CardContent>
+    </Card>
+         <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        Упор на практику
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        Более 60% обучения - работа над проектами. Ты будешь кодить
+         не только дома, но и прямо на уроках. К концу курса это
+          позволит сформировать настоящее партфолио работ.
+        </Typography>
+      </CardContent>
+    </Card>
+         <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        Внимание каждому студенту
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        Мы формируем небольшие группы - по 25 человек. Такую группу курирует
+         2 ментора и 1 глава направления. Это позволяет уделить персональное 
+         внимание каждому.
+          Ответы на вопросы, поддержка в чате, персональные интервью и индивидуальная 
+          проверка домашних заданий и экзаменов - все включено.
+        </Typography>
+      </CardContent>
+    </Card>
+         </div>
+         <div className='bttn'>
+        <button>Получить консультацию</button>
+        </div>
+        </section>
+        <section className='price'>
+            <div className='aaa'>
+              <h1>
+                Стоимость обучения
+              </h1>
+              <h2>
+              ОБУЧЕНИЕ <br />
+              IT-ПРОФЕССИИ
+              </h2>
+              <h3>
+                    Обучение полностью оффлайн
+                    2 ментора с опытом от 1х лет
+                    Чат с менторами и всеми студентами Академии
+                    Круглосуточный доступ ко всем учебным материалам и урокам
+                    Персональный отзыв на каждое задание
+                    Доступ к обучению на других направлениях/языках
+                    Ежемесячные тренинги 
+                    Собеседования, экзамены
+                    Система помощи в трудоустройстве
+                    3.5 месяцев обучения
+              </h3>
+              <h2>
+              13000
+                в месяц
+              </h2>
+            </div>
+        </section>
+        <section className='otzyv'>
+          <div className='ot'>
+            <h1>
+            Отзывы наших студентов
+            </h1>
           </div>
-               <button className='btnjoin'>Запросить тест</button>
+          <div className='sad'>
+          <div>
+          <Card sx={{ maxWidth: 645 }}>
+      <CardMedia
+        sx={{ height: 350 }}
+        image={vid}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        .....sdgblhasdghfujiahsdifghsdh
+        </Typography>
+      </CardContent>
+    </Card>
+          </div>
+          <div>
+          <Card sx={{ maxWidth: 645 }}>
+      <CardMedia
+        sx={{ height: 350 }}
+        image={vid}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        .....sdfkjkgasdjhfgsdhfgsdhfg
+        </Typography>
+      </CardContent>
+    </Card>
+          </div>
+          <div>
+          <Card sx={{ maxWidth: 645 }}>
+      <CardMedia
+        sx={{ height: 350 }}
+        image={vid}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        .....sdgbhhjasdgfuiawheuiwuf
+        </Typography>
+      </CardContent>
+    </Card>
+          </div>
+          <div>
+          <Card sx={{ maxWidth: 645 }}>
+      <CardMedia
+        sx={{ height: 350 }}
+        image={vid}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        .....SKJdfsdjfhsdjfhsdjfjshdfhsdhf
+        </Typography>
+      </CardContent>
+    </Card>
+          </div>
+          <div>
+          <Card sx={{ maxWidth: 645 }}>
+      <CardMedia
+        sx={{ height: 350 }}
+        image={vid}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        
+        </Typography>
+        <Typography className='vv' variant="h6" color="text.secondary">
+        .....asfjhashfgh sdhjfsjdfhghasdg
+        </Typography>
+      </CardContent>
+    </Card>
+          </div>
+          </div>
         </section>
-        <section>
+        <section className='questions'>
+          <h1>
+          Частые вопросы
+          </h1>
+          <div className='acordion'>
+          <Accordion>
+        <AccordionSummary>
+          <Typography><h3>Как выбрать язык?</h3></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <h2>
+            Просто - не выбирай. На первом месяце, когда мы проходим основы
+             программирования, ты сможешь попробовать все направления.
+              В конце месяца, после реальной практической работы, станет
+               ясно что понравилось тебе больше и по какому направлению 
+               стоит продолжить обучение.
+                А если не хочешь ждать старта в сентябре — попробуй себя на краткосрочных курсах
+            </h2>   
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+          <Accordion>
+        <AccordionSummary>
+          <Typography><h3>какой нужен компютер/ноутбук?</h3></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <h2>
+            Если ты хочешь учиться у нас оффлайн - тебе понадобится ноутбук. Если онлайн - будет достаточно ПК.
+              Минимальные требования к твоей машинке:
+              ⚡️ 64х-битная система
+              ⚡️ Двухъядерный процессор (intel core i3 и выше)
+              ⚡️ от 4х Гб оперативной памяти
+              ⚡️ рекомендуется SSD на 128 Гб и выше
+            </h2>   
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+          <Accordion>
+        <AccordionSummary>
+          <Typography><h3>Можно ли поступать без опыта в IT?</h3></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <h2>
+            Нужно! Для всех, кто обладает нулевым опытом мы
+             создали вводный курс обучения - основы программирования.
+              На нем ты изучишь все нужные термины, понятия и механики.
+               Он подготовит тебя к профессиональному изучению и поможет 
+               понять какое направление подходит больше всего.
+            </h2>   
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+          <Accordion>
+        <AccordionSummary>
+          <Typography><h3>я получу сертификат?</h3></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <h2>
+            Всем выпускникам курса мы выдаем официальный сертификат на
+             английском языке. Лучшие студенты получают сертификат золотого образца.
+              Сертификаты подкреплены нашей образовательной лицензией №LE18000550
+            </h2>   
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+          <Accordion>
+        <AccordionSummary>
+          <Typography><h3>Помогаете с трудоустройством?</h3></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <h2>
+            Конечно! У нас целая система, которая помогает выпускникам быть актуальными на рынке труда.
+              1. Только актуальные курсы
+              Мы за пускаем только востребованные направления на рынке КР. Многие наши курсы открываются 
+              в партнерстве с компаниями, нуждающимися в сотрудниках
+              2. Технические интервью
+              Каждые три месяца внешние специалисты тестируют наших студентов. По итогу таких интервью,
+              студенты получают рейтинг и персональные рекомендации по дальнейшему развитию.
+              3. Фокус на soft skills
+              В программу нашего обучения мы включаем не только технические навыки, но и навыки 
+              командной работы, ведения проектов, бизнес-мышление и многое другое.4. Портфолио
+              В IT среде самым важным является не диплом или сертификат обучения,
+              а фактический опыт. Вас будут оценивать по проектам, которые вы создали.
+                Поэтому в течении курса студенты академии создают несколько проектов, формирующих рабочее портфолио.5. Презентация выпускных работ
+              Самой большой демонстрацией возможностей студента является финальный проект.
+              На его демонстрацию мы приглашаем IT и HR специалистов, чтобы они дали 
+              оценку и увидели потенциал выпускников.6. Рассылка по HR
+              Оформленное резюме и портфолио выпускников рассылается по HR-специалистам 
+              IT-компаний Кыргызстана
+              7. Погружение в компании
+              Перед выпуском, студенты Бишкека проходят серию экскурсий по IT-компаниям.
+              Это дает возможность узнать больше о будущем месте работы и поговорить с сотрудниками.
 
+
+            </h2>   
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+          <Accordion>
+        <AccordionSummary>
+          <Typography><h3>Есть ли ограничение по возрасту?</h3></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <h2>
+            Для обучения IT-профессии мы принимаем всех ребят с 16 до 175 лет.
+            Система обучения очень гибкая и может адаптироваться под ритм жизни практически любого человека. 
+            А менторы обладают опытом в преподавании, что помогает найти общий язык со всеми студентами
+            и объяснять даже самые сложные темы простым языком.
+            </h2>   
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+          <Accordion>
+        <AccordionSummary>
+          <Typography><h3>Получится ли совмещать со школой/Университетом/работой?</h3></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <h2>
+            Получится, если ваш график не слишком загруженный. Минимальное количество 
+            часов, нужно для обучения в Академии - 3 часа каждый день.
+            Для того чтобы учиться действительно хорошо, потребуется уделять больше времени.
+             Но этого минимума хватит для усвоения 80% всего материала
+            </h2>   
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+          </div>
         </section>
+        <footer className='footer'>
+          <div>
+            <h1>Наши контакты</h1>
+          </div>
+          <div className='fot'>
+          <div className='fo'>
+            <h2>Для обучения</h2>
+            <a href="">+996500075002</a>
+            <a href="">+996777075002</a>
+            <a href="">hello@Knau-it.kg</a>
+          </div>
+          <div className='fo'>
+            <h2>Для партнерств</h2>
+            <a href="">+996 772 000 562</a>
+            <a href="">hello@Knau-it.kg</a>
+          </div>
+          <div className='fo'>
+            <h2>Работай в Академии</h2>
+            <a href="">Открытые вакансии</a>
+            <a href="">+996777075002</a>
+            <a href="">hello@Knau-it.kg</a>
+          </div>
+          </div>
+          <div className='fotes'>
+          <div className='svgs'>
+            <h2>СОЦСЕТИ</h2>
+            <svg data-testid="DeleteIcon"><FacebookIcon/></svg>
+            <svg data-testid="DeleteIcon"><TwitterIcon/></svg>
+            <svg data-testid="DeleteIcon"><InstagramIcon/></svg>
+            <svg data-testid="DeleteIcon"><YouTubeIcon/></svg>
+            <svg data-testid="DeleteIcon"><TelegramIcon/></svg>
+          </div>
+          <div>
+            <h2>ССЫЛКИ</h2>
+            <p>Профориентационный тест <br />
+                Зачисление на курс</p>
+          </div>
+          <div>
+            <h2>КУРСЫ</h2>
+            <p>Основы программирования <br />
+                Frontend разработчик</p>
+          </div>
+          </div>
+          
+        </footer>
     </div>
   )
 }

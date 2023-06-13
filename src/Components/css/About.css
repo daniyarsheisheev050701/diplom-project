@@ -1,0 +1,74 @@
+.headerabout img{
+    
+}
+
+.headerabout h1{
+    font-size: 68px;
+}
+.dd{
+    color: rgb(255, 183, 0);
+}
+
+.fron-1{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fron-1 h1{
+    font-size: 50px;
+}
+.fron-1 p{
+    font-size: 25px;
+}
+.jsim img{
+    width: 560px;
+    height: 70%;
+}
+
+.frpod{
+    height: 100vh;
+}
+
+.box1 h1{
+    font-size: 30px;
+    color: rgb(255, 183, 0);
+}
+.box1 p{
+    font-size: 20px;
+}
+.obuch{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+
+.frontobuchenie{
+    height: 100vh;
+    background-color: rgb(255, 183, 0);
+}
+
+
+.frontcards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.glowfront{
+    display: grid;
+    justify-content: center;
+}
+
+.glowfront h1{
+    text-align: center;
+    font-size: 44px;
+}
+
+.glowfront p{
+    text-align: center;
+    font-size: 34px;
+}
