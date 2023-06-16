@@ -5,7 +5,9 @@
    
 }
 .header{
-    background-color: black;
+    /* background-color: black; */
+    background-image: url('../../img/imgjsfront.jpg');
+    background-size: cover;
     height: 100vh;
 }
 .nav-logo img{
@@ -23,7 +25,7 @@
     padding-top: 3rem;
 }
 .nav-item a:hover{
-    color: #2a008b;
+    color: #4a008b;
     transition: 1s;
 }
 .item-header{
@@ -42,11 +44,14 @@
 .btn button{
     color: #fff;
     font-size: 24px;
-    background-color: #3c00c6;
+    background-color: #53038c;
     height: 7vh;
     width: 30%;
 }
-
+.btn button:hover{
+    color: red;
+    background-color: #2a008b;
+}
 
 .section-item{
     height: 100vh;
@@ -56,9 +61,17 @@
     padding-top: 8rem;
 
 }
+.cards::after{
+    transition: 0.5s;
+    border-radius: 20px;
 
+
+}
 .cards:hover{
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.409), 0 10px 10px rgba(0, 0, 0, 0.422);
+    box-shadow: 0 14px 28px rgb(79, 78, 78), 0 10px 10px rgba(87, 85, 85, 0.979);
+    transition: 0.5s;
+    border: none;
+    border-radius: 20px;
    
 }
 .text-item{
@@ -115,13 +128,14 @@
 
 
 .learning{
-    height: 120vh;
+    height: 180vh;
 }
 
 .learntext{
     display: grid;
     justify-content: center;
     text-align: center;
+    padding-top: 18rem;
 }
 
 .learntext h1{
@@ -139,8 +153,8 @@
 
 .learntext2{
     display: flex;
-    align-items: center;
-    text-align: center;
+    /* align-items: center; */
+    /* text-align: center; */
     justify-content: space-evenly;
 }
 
@@ -190,6 +204,7 @@
     padding: 20px 40px ;
     background-color: #4c00ff;
     color: #fff;
+    margin-bottom: 15px;
 }
 
 .bnn button:hover{
@@ -202,6 +217,7 @@
 
 .metods{
     text-align: center;
+    padding-top: 10rem;
 }
 
 
@@ -217,6 +233,10 @@
     padding: 20px 40px ;
     background-color: #4c00ff;
     color: #fff;
+    border-radius: 25px;
+    border: none;
+    margin-left: 50rem;
+    margin-top: 4rem;
 
 }
 
@@ -231,6 +251,7 @@
     line-height: 5rem;
 }
 .aaa h1{
+    padding-top: 15rem;
     font-size: 45px;
 }
 .aaa h2{
@@ -242,7 +263,7 @@
 
 
 .otzyv{
-    height: 100vh;
+    height: 150vh;
 }
 
 .sad{
@@ -254,7 +275,7 @@
 
 .ot h1{
     font-size: 54px;
-    padding-top: 5rem;
+    padding-top: 20rem;
     text-align: center;
 }
 .questions{
@@ -264,6 +285,7 @@
 .questions h1{
     font-size: 54px;
     text-align: center;
+    padding-bottom: 6rem;
 }
 
 .acordion{
@@ -323,4 +345,142 @@
 }
 .svgs {
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img {
+	width: 100%;
+	height: auto;
+}
+.wrapper {
+	max-width: 1000px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0 auto;
+	padding-top: 4rem;
+	margin-bottom: 10rem;
+}
+.cards {
+	display: grid;
+	grid-gap: 4rem;
+}
+.pen-title {
+	display: block;
+	grid-column: -1;
+	font-size: 4rem;
+}
+.card {
+	max-width: 500px;
+	width: 100%;
+	height: 350px;
+	position: relative;
+	padding: 3rem 2rem;
+	color: white;
+	justify-self: center;
+	transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+.card:hover {
+	transform: scale(1.02);
+}
+.card .card-content {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+	justify-content: space-between;
+}
+.card .card-content .bottom h2 {
+	font-size: 20px;
+}
+.card .top {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.8rem;
+}
+.card .top .name {
+	font-size: 1.8rem;
+}
+.card .top .date {
+	font-weight: bold;
+	opacity: 0.8;
+}
+.card .bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card .bottom .bookmark {
+	margin-left: 5rem;
+	border: 2px solid white;
+	padding: 0.7rem;
+	border-radius: 50%;
+}
+.card .bottom .bookmark .bookmark-icn {
+	fill: white;
+}
+.card .bottom .bookmark:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.card .card-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 20px;
+	overflow: hidden;
+	z-index: -1;
+}
+.card .card-bg .bg-img {
+	height: 100%;
+	object-fit: cover;
+	vertical-align: middle;
+}
+.card .shadow {
+	position: absolute;
+	width: 90%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	left: 50%;
+	transform: translate(-50%, 0);
+	bottom: -15px;
+	z-index: -2;
+	border-radius: 20px;
+	filter: blur(15px);
+}
+.card .shadow .shadow-img {
+	margin-top: 3rem;
+	object-fit: cover;
 }
